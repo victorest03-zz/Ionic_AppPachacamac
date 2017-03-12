@@ -1,0 +1,53 @@
+.elastic-image {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-top: 44px;
+	/* Initial image height: */
+	height: 300px;
+}
+
+.the-content {
+	/* Same as initial image height: */
+	padding-top: 300px;
+}
+
+@media screen and (max-height: 400px) {
+  	.elastic-image {
+    	height: 50%;
+  	}
+
+  	.the-content {
+		/* Same as initial image height: */
+		padding-top: 70%;
+	}
+}
+
+.map{
+	height: 300px;
+	width: 100%;
+}
+
+#right-panel {
+	font-family: 'Roboto','sans-serif';
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	margin-top: .2em;
+}
+
+#right-panel select, #right-panel input {
+  font-size: 15px;
+}
+
+#right-panel select,.adp-directions {
+  width: 100%;
+}
+
+#right-panel i {
+  font-size: 12px;
+}
+
+.adp-legal{
+	display: none;
+}

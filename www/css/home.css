@@ -1,0 +1,74 @@
+/* Empty. Add your own CSS if you like */
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600,800);
+
+@-webkit-keyframes anim {
+  from {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.4) ;
+  }
+  to {
+    -webkit-transform: scale(1) ;
+  }
+}
+
+.page{
+	height: 100%;
+	position: relative;
+}
+
+.page img {
+  height: 100%;
+  max-width: none;
+  -webkit-animation: anim ease-in-out 3s infinite alternate;
+}
+
+.btn-inicio{
+	bottom: 20px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding-left: 20%;
+	padding-right: 20%;
+}
+
+.page .titulo {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page .titulo h1 {
+  margin-top: 35px;
+  font-family: 'Bree Serif', serif;
+  text-align: center;
+  font-size: 3em;
+  text-shadow: -2px -2px 1px #ffffff, 2px 2px 1px #ffffff, -2px 2px 1px #ffffff, 2px -2px 1px #ffffff;
+  color: #bf1b04;
+}
+
+@media screen and (max-width: 300px) {
+  .page .titulo h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 220px) {
+  .page .titulo h1 {
+    font-size: 1.7em;
+  }
+}
+
+.bar .buttons span{
+  display: none;
+}
+
+
+.scroll-bar{
+  display: none;
+}

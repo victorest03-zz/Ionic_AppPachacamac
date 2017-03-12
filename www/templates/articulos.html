@@ -1,0 +1,21 @@
+<ion-view>
+  <ion-nav-title>{{arttitle}}</ion-nav-title>
+  <div class="buttons">
+    <button class="button">Right Button</button>
+  </div>
+  <ion-content overflow-scroll='true' >
+    <div class="load" ng-hide="dataLoaded">
+      <div class="load-icon">
+        <i class="ion-load-c"></i>
+      </div>
+    </div>
+		<div class="grupo" ng-show="dataLoaded">
+			<a class="caja" ng-repeat="item in articulos" href="#/articulodetalle/{{item._id}}" >
+				  <div class="item item-text-wrap art-content-imagen">
+			    	<img ng-src="http://apirest-pachacamac.azurewebsites.net/api/img/{{item.img}}" alt="" class="art-imagen">
+			  	</div>
+			  	<div class="item item-divider art-tiluto">{{item.title}}</div>
+			</a>
+		</div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,21 @@
+<ion-view title="Categoria">
+	<ion-content>
+    <div class="load" ng-hide="dataLoaded">
+      <div class="load-icon">
+        <i class="ion-load-c"></i>
+      </div>
+    </div>
+		<div class="categ" id="atracciones" ng-repeat="item in categorias" ng-show="dataLoaded">
+			<img ng-src="http://apirest-pachacamac.azurewebsites.net/api/img/{{item.img}}" alt="">
+			<a class="titulo" href="#/articulos/{{item._id}}">
+				<div class="contenedorExterior">
+				    <div class="contenedorInterior">
+				        <div class="elemento">
+                  <h1>{{item.title}}</h1>
+				        </div>
+				    </div>
+				</div>
+			</a>
+    </div>
+	</ion-content>
+</ion-view>

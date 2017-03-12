@@ -1,0 +1,66 @@
+<ion-view title="Detalle" hide-nav-bar="true">
+  <ion-header-bar class="bar-assertive bar bar-header" align-title="center">
+    <button class="button back-button buttons button-clear header-item" style="margin-left: 10px;" ng-click="$ionicGoBack()">
+      <i class="ion-chevron-left"></i><span class="back-text"></span>
+    </button>
+    <div class="title title-center header-item" style="left: 19px; right: 19px;">
+      <span class="nav-bar-title ng-binding">Detalles</span>
+    </div>
+    <div class="buttons">
+      <button class="button button-icon ion-compose" ng-click="modal.show()">
+      </button>
+    </div>
+  </ion-header-bar>
+
+	<div id="the-image-id" class="elastic-image" ng-style="{'background-image':'url(http://apirest-pachacamac.azurewebsites.net/api/img/'+articulo.img+')'}">
+  </div>
+
+	<ion-content elastic-image="the-image-id" class="padding">
+		<div class="the-content">
+				<h2>{{articulo.title}}</h2>
+				<p>{{articulo.description}}</p>
+			<div class="list">
+				<div class="item item-icon-left" href="#">
+    				<i class="icon ion-clock"></i>
+    				{{articulo.attention}}
+				</div>
+				<div class="item item-icon-left" href="#">
+    				<i class="icon ion-map"></i>
+    				{{articulo.location}}
+				</div>
+			</div>
+			<div class="map" id="map">
+
+      </div>
+			<div id="right-panel"></div>
+		</div>
+	</ion-content>
+
+  <script id="contact-modal.html" type="text/ng-template">
+    <div class="modal" id="modal">
+      <ion-header-bar class="bar-assertive">
+        <h1 class="title">Comentario</h1>
+        <button class="buttons button button-icon ion-close-round" ng-click="closeModal()"></button>
+      </ion-header-bar>
+      <ion-content class="padding">
+        <div class="card">
+          <div class="item item-divider">
+            Feed Back
+          </div>
+          <form name='myform' class="item item-text-wrap" ng-submit="enviarfeedback()">
+            <input type="hidden" id="item" name="item" value="{{articulo._id}}" ng-model="dta.item">
+            <label class="item item-input">
+              <input type="text" placeholder="Su nombre" id="name" name="name" ng-model="dta.name">
+            </label>
+            <label class="item item-input">
+              <textarea placeholder="Ingrese su comentario" rows="5" id="description" name="description" ng-model="dta.description"></textarea>
+            </label>
+            <input type="submit" class="button button-block button-assertive" value="Enviar">
+            <p>{{res}}</p>
+          </form>
+        </div>
+      </ion-content>
+    </div>
+  </script>
+
+</ion-view>
